@@ -10,7 +10,7 @@
         </div>
     <div class="hero-unit" style="padding: 3px; font-size:10px">
      <!--div style="text-align: left; padding: 5px; border: 1px solid #ddd; border-radius: 20px;" class="centering" -->
-      <div id="vendorsList" style="float:left; width:399px;border-right:1px solid gray">
+      <div id="vendorsList" style="float:left; width:380px; margin-right: 5px; border-right:1px solid gray;">
        <table>
           <th><td>
                Bids by endors
@@ -18,10 +18,13 @@
            {% for bid in project.bid_set.all %}
           <tr>
 				{% autoescape off %}
-              <h3>{{ bid.vendor.name }}</h3>
+				<div style="border-radius: 10px; background-color: #FFEA99; padding: 10px; margin-bottom: 10px;">
+					<h3>{{ bid.vendor.name }}</h3>
+					<hr />
+				 <p>Rating: ★★★½ {{ bid.vendor.rating }}</p>
+
               <p style="font-size: 90%">{{ bid.description }}</p>
-			  <p>Rating: ★★★½ {{ bid.vendor.rating }}</p>
-			  <style>
+			 			  <style>
 				  p {  line-height: auto; }
 			  </style>
 			  <div style="font-size: 12px; border: 0px solid gray; line-height: auto;">
@@ -30,6 +33,9 @@
               <p style="font-size: 12px; line-height: 12px; ">{{ bid.vendor.address.state }}</p>
 			  <p style="font-size: 12px; line-height: 12px; " >{{ bid.vendor.address.zip }}</p>
 		  </div>
+	  </div>
+	  <hr />
+
 			  {% endautoescape %}
           </tr>
            {% endfor %}
