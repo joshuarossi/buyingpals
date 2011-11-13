@@ -25,7 +25,8 @@ class Vendor(models.Model):
     user = models.ForeignKey(User)
     address = models.OneToOneField(Address)
     tags = models.ManyToManyField(Tag)
-    
+    rating = models.IntegerField();
+
     def __unicode__(self):
         return self.name
 

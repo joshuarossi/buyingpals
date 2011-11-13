@@ -35,7 +35,7 @@ urlpatterns = patterns('app.views',
     url(r'^projects/(?P<pk>\d+)/$',
         DetailView.as_view(
             model=Project,
-            template_name='projects/show.html')),
+            template_name='projects/detail.html')),
     url(r'^projects/(?P<pk>\d+)/created$',
         DetailView.as_view(
             model=Project,
