@@ -33,7 +33,14 @@ class Property(models.Model):
     user        = models.ForeignKey(User)
     address     = models.OneToOneField(Address)
     sqft        = models.IntegerField();
+    numOfRooms  = models.IntegerField();
+    numOfStairs = models.IntegerField();
     lawn_sqft   = models.IntegerField();
+
+    type = models.CharField(max_length=200, choices=(
+        ('house', 'House'),
+        ('condo', 'Condo'),
+    ))
     
     def __unicode__(self):
         return self.user.username + u" address";
