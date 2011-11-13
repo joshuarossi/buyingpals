@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.template import RequestContext
 from django.shortcuts import get_object_or_404, render_to_response
+from models import *
 
 def home(request):
     return render_to_response('base.html', context_instance=RequestContext(request))
@@ -39,6 +40,9 @@ def search(request):
 	return render_to_response('search.html',  context_instance=RequestContext(request))
 
 def searchresults(request):
-	return render_to_response('searchresults.html',  context_instance=RequestContext(request))
+    project_list = Project.objects.all()
+    return render_to_response('searchresults.html',
+            {'project_list': project_list},
+                              context_instance=RequestContext(request))
 
 

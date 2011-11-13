@@ -25,7 +25,7 @@ urlpatterns = patterns('app.views',
 
 	url(r'^providers$', 'providers'),
 	url(r'^search$', 'search'),
-#	url(r'^searchresults$', 'searchresults'),
+	url(r'^searchresults$', 'searchresults'),
 
 	    # project pages
     url(r'^projects$',
@@ -59,10 +59,10 @@ urlpatterns = patterns('app.views',
             model=Vendor,
             template_name='vendors/detail.html')),
 
-    url(r'^searchresults$',
-        ListView.as_view(
-            model=Project,
-            template_name='searchresults.html')),
+#    url(r'^searchresults$',
+#        ListView.as_view(
+#            model=Project,
+#            template_name='searchresults.html')),
 
     # url(r'^(?P<pk>\d+)/results/$',
     #     DetailView.as_view(
