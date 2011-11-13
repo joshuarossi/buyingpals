@@ -17,6 +17,9 @@ def logout(request):
 def signup(request):
     return render_to_response('signup.html', context_instance=RequestContext(request))
 
+def signin(request):
+    return render_to_response('signin.html', context_instance=RequestContext(request))
+
 def comingsoon(request):
 	return render_to_response('comingsoon.html',  context_instance=RequestContext(request))
 
