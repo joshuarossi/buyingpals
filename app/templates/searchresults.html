@@ -43,7 +43,7 @@
   </tr>
     {% for project in project_list %}
   <tr>
-    <td><p><strong>{{ project.pk }}</strong></p></td>
+	  <td><p><strong><a href="/projectDescription">{{ project.pk }}</a></strong></p></td>
     <td><a href="/projects/{{ project.pk }}">http://buyinpals.com/projects/{{ project.pk }}</a></td>
     <td>12/13/2011</td>
     <td>{{ project.tags.all }}</td>

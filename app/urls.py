@@ -22,6 +22,7 @@ urlpatterns = patterns('app.views',
 	url(r'^post$', 'post'),
 	url(r'^confirm$', 'confirm'),
 	url(r'^details$', 'details'),
+	url(r'^projectDescription$', 'projectDescription'),
 
 	url(r'^providers$', 'providers'),
 	url(r'^search$', 'search'),

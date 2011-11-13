@@ -45,4 +45,7 @@ def searchresults(request):
             {'project_list': project_list},
                               context_instance=RequestContext(request))
 
+def projectDescription(request):
+	return render_to_response('projectDescription.html',  context_instance=RequestContext(request))
+
 

@@ -4,12 +4,17 @@
 	  <div class="hero-unit">
 		<div class="actions">
 			<h2>Everything OK?</h2>
-			<form action="details">
+			<form action="/projectDescription">
 		<table width="400" border="1">
     <tr>
       <td><label for="zipCode">Zip Code</label></td>
       <td><input type="text" name="zipCode" id="zipCode" value="08540" /></td>
     </tr>
+	<tr>
+     <td><label for="jobNotes">Add your Job Notes</label></td>
+      <td><input type="textarea" rows="2" cols="20" name="jobNotes" id="jobNotes" style="color:red" value="I have 5 rooms and 1,000 Sq Ft." /></td>
+	</tr>
+
     <tr>
 		<td><label for="categorySelect">Category</label></td>
       <td><select name="categorySelect" id="categorySelect">
