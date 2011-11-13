@@ -190,7 +190,7 @@ body {
   color: #404040;
 }
 .container {
-  width: 640px;
+  width: 620px;
   margin-left: auto;
   margin-right: auto;
   zoom: 1;
@@ -375,10 +375,10 @@ a:hover {
   margin-left: 740px;
 }
 .span-one-third {
-  width: 300px;
+  width: 190px;
 }
 .span-two-thirds {
-  width: 620px;
+  width: 420px;
 }
 .offset-one-third {
   margin-left: 340px;
@@ -1398,17 +1398,16 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
 }
 .topbar-inner, .topbar .fill {
-  background-color: #222;
-  background-color: #222222;
+  background-color: #003;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#333333), to(#222222));
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#131168), to(#444466));
+  background-image: -moz-linear-gradient(top, #131168, #444466);
+  background-image: -ms-linear-gradient(top, #131168, #444466);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #131168), color-stop(100%, #444466));
+  background-image: -webkit-linear-gradient(top, #131168, #444466);
+  background-image: -o-linear-gradient(top, #131168, #444466);
+  background-image: linear-gradient(top, #131168, #444466);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#131168', endColorstr='#444466', GradientType=0);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
@@ -1769,7 +1768,7 @@ a.menu:after, .dropdown-toggle:after {
 .hero-unit {
   background-color: #f5f5f5;
   margin-bottom: 30px;
-  padding: 60px;
+  padding: 20px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
