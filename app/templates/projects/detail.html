@@ -10,29 +10,35 @@
         </div>
     <div class="hero-unit" style="padding: 3px; font-size:10px">
      <!--div style="text-align: left; padding: 5px; border: 1px solid #ddd; border-radius: 20px;" class="centering" -->
-      <div id="vendorsList" style="float:left; width:475px;border:1px solid black">
+      <div id="vendorsList" style="float:left; width:399px;border-right:1px solid gray">
        <table>
           <th><td>
                Bids by endors
           </td></th>
            {% for bid in project.bid_set.all %}
           <tr>
-
-              <p>{{ bid.vendor.name }}</p>
-              <p>{{ bid.description }}</p>
-              <p>{{ bid.vendor.rating }}</p>
-              <p>{{ bid.vendor.address.street }}</p>
-              <p>{{ bid.vendor.address.city}}</p>
-              <p>{{ bid.vendor.address.state }}</p>
-              <p>{{ bid.vendor.address.zip }}</p>
+				{% autoescape off %}
+              <h3>{{ bid.vendor.name }}</h3>
+              <p style="font-size: 90%">{{ bid.description }}</p>
+			  <p>Rating: ★★★½ {{ bid.vendor.rating }}</p>
+			  <style>
+				  p {  line-height: auto; }
+			  </style>
+			  <div style="font-size: 12px; border: 0px solid gray; line-height: auto;">
+			  <p style="font-size: 12px; line-height: 12px;">{{ bid.vendor.address.street }}</p>
+              <p style="font-size: 12px; line-height: 12px; ">{{ bid.vendor.address.city}}</p>
+              <p style="font-size: 12px; line-height: 12px; ">{{ bid.vendor.address.state }}</p>
+			  <p style="font-size: 12px; line-height: 12px; " >{{ bid.vendor.address.zip }}</p>
+		  </div>
+			  {% endautoescape %}
           </tr>
            {% endfor %}
        </table>
       </div>
 
-      <div id="buyInPalsList" style="float:right; width:155px;border:1px solid black">
+      <div id="buyInPalsList" style="float:right; width:210px;padding-left: 3px;">
       <table>
-          <th><td>BuyIn Pals</td></th>
+		  <th><td><h3>BuyIn Pals</h3></td></th>
           <tr>
            <table style="border:1px solid grey">
               <tr><td>User </td><td>caren</td></tr>
@@ -84,7 +90,7 @@
 
     <!-- Example row of columns -->
 
-    <footer>
+    <footer style="clear: both">
       <p>&copy; Buying Pals 2011</p>
     </footer>
 
