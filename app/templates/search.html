@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	  <div class="hero-unit">
+		  <div style="text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
+		<h2>Search</h2>
+		<hr />
+		<p>Find a local buying opportunity</p>
+		<hr />
+		<div class="">
+		<div style="text-align: center;">
+        <form id="form" name="theform" method="post" action="searchresults">
+        <table width="300" border="1">
+          <tr>
+            <td width="81"><label for="zipcode">Zip Code</label></td>
+            <td width="203">
+              <input type="text" name="zipcode" id="zipcode" />
+              
+            </td>
+          </tr>
+          <tr>
+            <td><label for="categorySelect">Category</label></td>
+            <td><select name="categorySelect" id="categorySelect">
+        <option value="carpetCleaning">Carpet cleaning</option>
+        <option value="chimneySweep">Chimney sweeping</option>
+        <option value="leafBlowing">Leaf blowing</option>
+        <option value="snowRemoval">Snow removal</option>
+      </select></td>
+          </tr>
+        </table>
+        <p>
+          <button class="btn" type="submit">Search</button>
+        </p>
+        </form>
+        <p>&nbsp;</p>
+		</div>
+	</div>
+</div> <!-- /centering -->
+	  </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span-two-thirds">
+          <h2>What is Buying Pals?</h2>
+          <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+		  <!-- <p><a class="btn" href="#">View details &raquo;</a></p> -->
+        </div>
+</div>
+      <footer>
+ <p>Copyright ©2011 BuyIn Pals Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the BuyIn Pals User Agreement and Privacy Policy. </p>
+      </footer>
+{% endblock %}

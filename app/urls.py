@@ -21,6 +21,10 @@ urlpatterns = patterns('app.views',
 	url(r'^post$', 'post'),
 	url(r'^confirm$', 'confirm'),
 	url(r'^details$', 'details'),
+	url(r'^providers$', 'providers'),
+	url(r'^search$', 'search'),
+	url(r'^searchresults$', 'searchresults'),
+
     url(r'^projects$',
         ListView.as_view(
             model=Project,

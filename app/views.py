@@ -29,6 +29,13 @@ def confirm(request):
 def details(request):
 	return render_to_response('details.html',  context_instance=RequestContext(request))
 
+def providers(request):
+	return render_to_response('providers.html',  context_instance=RequestContext(request))
 
+def search(request):
+	return render_to_response('search.html',  context_instance=RequestContext(request))
+
+def searchresults(request):
+	return render_to_response('searchresults.html',  context_instance=RequestContext(request))
 
 
