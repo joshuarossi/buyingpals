@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	  <div class="hero-unit">
+		  <div style="text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
+		<h2>Confirm project and enter your project specifics.</h2>
+		<div id="personalDetails">
+			<table width="300" border="1">
+			  <th><td colspan="2">Personal Info</td></th>
+			  <tr>
+			    <td><label><b>Name</b></label></td>
+			    <td><label>Ashish Jain</label></td>
+		      </tr>
+			  <tr>
+			    <td><label><b>Address</b></label></td>
+			    <td><label>123 Main Street, Plainsboro, NJ 08536</label></td>
+		      </tr>
+          </table>
+		</div>
+		<div id="projectDetails">
+			<table width="300" border="1">
+			  <th><td colspan="2">Selected Project</td></th>
+			  <tr>
+			    <td><label><b>Zip Code</b></label></td>
+			    <td><label>08536</label></td>
+		      </tr>
+			  <tr>
+			    <td><label><b>Category</b></label></td>
+			    <td><label>Chimney Sweep</label></td>
+		      </tr>
+			  <tr>
+			    <td><label><b>Buy In Date by</b></label></td>
+			    <td><label>12 December 2012</label></td>
+		      </tr>
+		  </table>
+		</div>
+		<div id="instructions">
+			<form action="post" class="inputs-list" style="margin: 0 auto;">
+				<table>
+					<th><td>Instructions and Details</td></th>
+					<tr><td><textarea></textarea></td></tr>
+						
+				</table>
+			</form>
+			<li><button class="btn pull-right" type="submit">Click to Buy In</button></li>
+		</div>
+
+</div> <!-- /centering -->
+	  </div>
+
+      <!-- Example row of columns -->
+      <footer>
+        <p>Copyright ©2011 BuyIn Pals Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the BuyIn Pals User Agreement and Privacy Policy. </p>
+    </footer>
+{% endblock %}
