@@ -21,6 +21,8 @@ urlpatterns = patterns('app.views',
 	url(r'^post$', 'post'),
 	url(r'^confirm$', 'confirm'),
 	url(r'^details$', 'details'),
+
+    # project pages
     url(r'^projects$',
         ListView.as_view(
             model=Project,
@@ -39,6 +41,12 @@ urlpatterns = patterns('app.views',
         ListView.as_view(
             model=Vendor,
             template_name='vendors/index.html')),
+
+    # vendor pages
+    url(r'^vendors/(?P<pk>\d+)/$',
+        DetailView.as_view(
+            model=Vendor,
+            template_name='vendors/detail.html')),
 
     # url(r'^(?P<pk>\d+)/results/$',
     #     DetailView.as_view(

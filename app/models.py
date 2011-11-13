@@ -18,7 +18,7 @@ class Address(models.Model):
     lat     = models.CharField(max_length=200)
     
     def __unicode__(self):
-        return self.city;
+        return self.street + " " + self.city + " " + self.state;
 
 class Vendor(models.Model):
     name = models.CharField(max_length=200)
@@ -49,7 +49,8 @@ class Property(models.Model):
 class Project(models.Model):
     title   = models.CharField(max_length=200)
     members = models.ManyToManyField(User)
-    
+    tags = models.ManyToManyField(Tag)
+
     def __unicode__(self):
         return self.title;
 
