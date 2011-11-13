@@ -1,0 +1,24 @@
+
+
+
+{% extends "base.html" %}
+
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+
+{% if project_list %}
+    <ul>
+    {% for project in project_list %}
+        <li>{{ project.title }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No projects are available.</p>
+{% endif %}
+
+{{ STATIC_PREFIX }}
+
+{% endblock %}
+
+
