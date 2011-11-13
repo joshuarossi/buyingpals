@@ -6,7 +6,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Buying Pals</title>
+    <title>{% block title %}Buying Pals{% endblock %}</title>
     <meta name="description" content="Really good deals">
     <meta name="author" content="me@onpaws.com">
 
@@ -22,19 +22,13 @@
         body {
             padding-top: 60px;
         }
-        {% block style %}{% endblock %}
     </style>
     
-
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="{{ STATIC_PREFIX }}images/favicon.ico">
     <link rel="apple-touch-icon" href="{{ STATIC_PREFIX }}images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ STATIC_PREFIX }}images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ STATIC_PREFIX }}images/apple-touch-icon-114x114.png">
-    
-    <script type="text/javascript" charset="utf-8">
-        {% block script %}{% endblock %}
-    </script>
     
     {% block head %}{% endblock %}
   </head>
@@ -44,7 +38,7 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#">Buying Pals</a>
+          <a class="brand" href="/">Buying Pals</a>
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="projects">Projects</a></li>
@@ -62,7 +56,7 @@
     </div>
 
     <div class="container">
-     {% block container %}
+     {% block content %}
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>Welcome!</h1>
@@ -96,7 +90,7 @@
       <footer>
         <p>&copy; Buying Pals 2011</p>
       </footer>
-      {% endblock container %}
+      {% endblock content %}
     </div> <!-- /container -->
 
   </body>

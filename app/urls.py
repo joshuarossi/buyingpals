@@ -13,7 +13,9 @@ from app.models import *
 
 urlpatterns = patterns('app.views',
     url(r'^$', 'home'),
-    
+    url(r'^login$', 'login'),
+    url(r'^logout$', 'logout'),
+    url(r'^signup$', 'signup'),
     url(r'^projects$',
         ListView.as_view(
             model=Project,
@@ -28,16 +30,16 @@ urlpatterns = patterns('app.views',
         DetailView.as_view(
             model=Project,
             template_name='projects/created.html')),
-
-    
     url(r'^vendor$',
         ListView.as_view(
             model=Vendor,
             template_name='vendors/index.html')),
+
     # url(r'^(?P<pk>\d+)/results/$',
     #     DetailView.as_view(
     #         model=Poll,
     #         template_name='polls/results.html'),
     #     name='poll_results'),
     # url(r'^(?P<poll_id>\d+)/vote/$', 'polls.views.vote'),
+
 )
