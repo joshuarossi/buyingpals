@@ -10,6 +10,7 @@
 		<div class="">
 		<div style="text-align: center;">
         <form id="form" name="theform" method="post" action="searchresults">
+            {% csrf_token %}
         <table width="300" border="1">
           <tr>
             <td width="81"><label for="zipcode">Zip Code</label></td>
