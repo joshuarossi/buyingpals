@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="08186405-d6ab-42d7-bbd4-2d54460d7304" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/base.html" afterPath="$PROJECT_DIR$/app/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/projects/detail.html" afterPath="$PROJECT_DIR$/app/templates/projects/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/searchresults.html" afterPath="$PROJECT_DIR$/app/templates/searchresults.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/urls.py" afterPath="$PROJECT_DIR$/app/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
     </list>
     <ignored path="buyingpals.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +31,7 @@
           <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="38" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
+                <state line="7" column="3" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -62,7 +58,7 @@
           <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/templates/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="32" column="50" selection-start="1161" selection-end="1161" vertical-scroll-proportion="-9.884615">
+                <state line="50" column="62" selection-start="1782" selection-end="1832" vertical-scroll-proportion="-10.326923">
                   <folding />
                 </state>
               </provider>
@@ -98,7 +94,7 @@
           <file leaf-file-name="detail.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/templates/projects/detail.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="38" column="69" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.20149253">
+                <state line="87" column="70" selection-start="3230" selection-end="3230" vertical-scroll-proportion="0.91459626">
                   <folding />
                 </state>
               </provider>
@@ -108,7 +104,9 @@
             <entry file="file://$PROJECT_DIR$/app/templates/details.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-                  <folding />
+                  <folding>
+                    <marker date="1321217019000" expanded="true" signature="828:838" placeholder="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -147,7 +145,7 @@
           <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="19" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+                <state line="15" column="19" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -156,7 +154,7 @@
           <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/templates/test.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="0" selection-start="44" selection-end="2415" vertical-scroll-proportion="0.06521739">
+                <state line="19" column="0" selection-start="469" selection-end="469" vertical-scroll-proportion="0.41304347">
                   <folding />
                 </state>
               </provider>
@@ -560,13 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="50" selection-start="1161" selection-end="1161" vertical-scroll-proportion="-9.884615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/searchresults.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="38" selection-start="832" selection-end="832" vertical-scroll-proportion="-9.375">
@@ -590,21 +581,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="44" selection-end="2415" vertical-scroll-proportion="0.06521739">
+        <state line="15" column="19" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="38" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
+        <state line="7" column="3" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -626,7 +610,9 @@
     <entry file="file://$PROJECT_DIR$/app/templates/details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1321217019000" expanded="true" signature="828:838" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -637,9 +623,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="469" selection-end="469" vertical-scroll-proportion="0.41304347">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="62" selection-start="1782" selection-end="1832" vertical-scroll-proportion="-10.326923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/projects/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="69" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.20149253">
+        <state line="87" column="70" selection-start="3230" selection-end="3230" vertical-scroll-proportion="0.91459626">
           <folding />
         </state>
       </provider>

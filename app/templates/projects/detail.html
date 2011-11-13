@@ -52,7 +52,7 @@
 {% block content %}
     <!-- Main hero unit for a primary marketing message or call to action -->
     <div class="page-header">
-			<h1>{{ project.title }}<small></small></h1>
+			<h1>{{ project.title }}<small> <a href="#"> search for more vendors ...</a> </small></h1>
         </div>
     <div class="hero-unit">
 		  <div style="text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
@@ -73,6 +73,7 @@
 					<h3>{{ bid.vendor.name }}</h3>
 					<hr />
 				 <p>Rating: ★★★½ </p>
+                 <p style="color: red">Price: ${{ bid.pk }}2 / sqrt </p>
 
               <p style="font-size: 90%">{{ bid.description }}</p>
 			 			  <style>
@@ -84,6 +85,7 @@
               <p style="font-size: 12px; line-height: 12px; ">{{ bid.vendor.address.city}}</p>
               <p style="font-size: 12px; line-height: 12px; ">{{ bid.vendor.address.state }}</p>
 			  <p style="font-size: 12px; line-height: 12px; " >{{ bid.vendor.address.zip }}</p>
+                  <button class="btn" type="submit">Select this vendor</button>
 		  </div>
 	  </div>
 	  <hr />
