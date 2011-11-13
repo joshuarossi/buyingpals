@@ -1,6 +1,79 @@
 {% extends 'base.html' %}
 
 {% block content %}
+	  <div class="hero-unit">
+		  <div style="text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
+		<h2>Please create your account</h2>
+		<form action="post" class="inputs-list" style="margin: 0 auto; width: 550px">
+			<div style="text-align: left; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
+		<h2>&nbsp;</h2>
+		<form action="post" class="inputs-list" style="margin: 0 auto; width: 450px">
+			<table width="300" border="1">
+			  <tr>
+			    <td><label>First Name</label></td>
+			    <td><input class="input-small" type="text" placeholder="First Name"></td>
+		      </tr>
+			  <tr>
+			    <td><label>Last Name </label></td>
+			    <td><input class="input-small" type="text" placeholder="Last Name"></td>
+		      </tr>
+			  <tr>
+			    <td><label>Address Line 1</label></td>
+			    <td><input class="input-small" type="text" placeholder="Address Line 1" /></td>
+		      </tr>
+			  <tr>
+			    <td><label>Address Line 2</label></td>
+			    <td><input class="input-small" type="text" placeholder="First Name" /></td>
+		      </tr>
+			  <tr>
+			    <td><label>City </label></td>
+			    <td><input class="input-small" type="text" placeholder="City" /></td>
+		      </tr>
+			  <tr>
+			    <td><label>State</label></td>
+			    <td><input class="input-small" type="text" placeholder="State" /></td>
+		      </tr>
+			  <tr>
+			    <td><label>Zip</label></td>
+			    <td><input class="input-small" type="text" placeholder="Zip" /></td>
+		      </tr>
+          </table>
+		  <hr/>
+          <h3>Pick a user name: </h3>
+          <table class="inputs-list" >
+          		  <tr>
+			    <td><label>Username</label></td>
+			    <td><input class="input-small" type="text" placeholder="" /></td>
+		      </tr>
+               <tr>
+			    <td><label>Password</label></td>
+			    <td><input class="input-small" type="text" placeholder="" /></td>
+		      </tr>
+              <td>Re-enter Password</td>
+              <td><input class="input-small" type="password" placeholder="Re-enter Password"></td>
+          </table>
+			<li><button class="btn pull-right" type="submit">Click to register</button></li>
+		</form>
+		<hr />
+</div> <!-- /centering -->
+		</form>
+		<hr />
+		<div class="">
+		<div style="text-align: center;">
+		<p>Connect your social accounts</p>
+		<img src="{{ STATIC_PREFIX }}images/twitter.png" alt="twitter logo" />
+		<img style="margin-left: 15px;" src="{{ STATIC_PREFIX }}images/facebook.png" alt="twitter logo" />
+		</div>
+	</div>
+</div> <!-- /centering -->
+	  </div>
+
+      <!-- Example row of columns -->
+      <footer>
+        <p>Copyright ©2011 BuyIn Pals Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the BuyIn Pals User Agreement and Privacy Policy. </p>
+    </footer>
+{% endblock %}
+=======
     <!-- Main hero unit for a primary marketing message or call to action -->
     <div class="hero-unit">
         <div style="text-align: left; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
@@ -44,4 +117,3 @@
         <p>&copy; Buying Pals 2011</p>
     </footer>
 
-{% endblock content %}

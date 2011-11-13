@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	  <div class="hero-unit">
+		  <div style="text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
+		<h2>Provider Search</h2>
+		<hr />
+		<div class="">
+		<div style="text-align: center;">
+        <form id="form" name="theform" method="post" action="searchresults">
+        <table width="300" border="1">
+          <tr>
+            <td width="81"><label for="zipcode">Zip Code</label></td>
+            <td width="203">
+              <input type="text" name="zipcode" id="zipcode" />
+              
+            </td>
+          </tr>
+          <tr>
+            <td><label for="categorySelect">Category</label></td>
+            <td><select name="categorySelect" id="categorySelect">
+        <option value="carpetCleaning">Carpet cleaning</option>
+        <option value="chimneySweep">Chimney sweeping</option>
+        <option value="leafBlowing">Leaf blowing</option>
+        <option value="snowRemoval">Snow removal</option>
+      </select></td>
+          </tr>
+        </table>
+        <p>
+          <button class="btn" type="submit">Search</button>
+        </p>
+        </form>
+        <h2>Results</h2>
+        <p>The following providers can perform this work:</p>
+        <table width="400" border="1">
+  <tr>
+    <td>Job ID</td>
+    <td>URL</td>
+    <td>Date</td>
+  </tr>
+  <tr>
+    <td><p><strong>Carpet Tech Cleaning &amp; Restoration Specialists, LLC  </strong><br />
+        Palmer Square, Princeton, NJ 08542 <br />
+        (609) 333-1900 </p></td>
+    <td><a href="http://www.callcarpettech.com/">http://www.callcarpettech.com/</a></td>
+    <td>11/13/2011</td>
+  </tr>
+  <tr>
+    <td><p><strong>Fred Mason Co</strong><br />
+      Princeton, NJ 08540<br />
+      (609) 924-3112</p></td>
+    <td><a href="http://fredmasonandson.com">fredmasonandson.com</a></td>
+    <td>11/13/2011</td>
+  </tr>
+  <tr>
+    <td><p><strong>Pennington Carpet &amp; Upholstery Cleaning</strong><br />
+      1589 Reed Road<br />
+      Pennington, NJ 08534<br />
+      (609) 737-3990</p></td>
+    <td><a href="http://www.penningtoncarpetcleaning.com/">http://www.penningtoncarpetcleaning.com/</a></td>
+    <td>11/12/2011</td>
+  </tr>
+  <tr>
+    <td><p><strong>Integrity Carpet Care LLC</strong><br />
+        234 Barnsboro Road<br />
+        Mantua, NJ 08051<br />
+(856) 589-0700</p></td>
+    <td><a href="http://www.integritycarpetcare.info/">http://www.integritycarpetcare.info/</a></td>
+    <td>11/10/2011</td>
+  </tr>
+        </table>
+		<form id="form1" name="form1" method="post" action="">
+		  <input type="submit" name="button" id="button" value="Submit" />
+		  </form>
+		<img src="{{ STATIC_PREFIX }}images/twitter.png" alt="twitter logo" />
+		<img style="margin-left: 15px;" src="{{ STATIC_PREFIX }}images/facebook.png" alt="twitter logo" />
+		</div>
+	</div>
+</div> <!-- /centering -->
+	  </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span-two-thirds">
+          <h2>What is Buying Pals?</h2>
+          <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+		  <!-- <p><a class="btn" href="#">View details &raquo;</a></p> -->
+        </div>
+</div>
+      <footer>
+ <p>Copyright ©2011 BuyIn Pals Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the BuyIn Pals User Agreement and Privacy Policy. </p>
+      </footer>
+{% endblock %}

@@ -17,12 +17,17 @@ urlpatterns = patterns('app.views',
     url(r'^login$', 'login'),
     url(r'^logout$', 'logout'),
     url(r'^signup$', 'signup'),
+    url(r'^signin$', 'signin'),
 	url(r'^comingsoon$', 'comingsoon'),
 	url(r'^post$', 'post'),
 	url(r'^confirm$', 'confirm'),
 	url(r'^details$', 'details'),
 
-    # project pages
+	url(r'^providers$', 'providers'),
+	url(r'^search$', 'search'),
+	url(r'^searchresults$', 'searchresults'),
+
+	    # project pages
     url(r'^projects$',
         ListView.as_view(
             model=Project,

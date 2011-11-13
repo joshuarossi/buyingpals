@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	  <div class="hero-unit">
+		  <div style="text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
+		 <h2>Search</h2>
+		   <hr />
+		<div class="">
+		<div style="text-align: center;">
+        <form id="form" name="theform" method="post" action="searchresults">
+        <table width="300" border="1">
+          <tr>
+            <td width="81"><label for="zipcode">Zip Code</label></td>
+            <td width="203">
+              <input type="text" name="zipcode" id="zipcode" />
+              
+            </td>
+          </tr>
+          <tr>
+            <td><label for="categorySelect">Category</label></td>
+            <td><select name="categorySelect" id="categorySelect">
+        <option value="carpetCleaning">Carpet cleaning</option>
+        <option value="chimneySweep">Chimney sweeping</option>
+        <option value="leafBlowing">Leaf blowing</option>
+        <option value="snowRemoval">Snow removal</option>
+      </select></td>
+          </tr>
+        </table>
+        <p>
+          <button class="btn" type="submit">Search</button>
+        </p>
+        </form>
+        <h2>Results</h2>
+        <p>The following buying opportunities are happening:</p>
+        <table width="400" border="1">
+  <tr>
+    <td><strong>Project ID</strong></td>
+    <td><strong>URL</strong></td>
+    <td><strong>Join by</strong></td>
+    <td><strong>Category</strong></td>
+    <td><strong>Status</strong></td>
+  </tr>
+  <tr>
+    <td><p><strong>1</strong></p></td>
+    <td><a href="/projects/1">http://buyinpals.com/deals/1</a></td>
+    <td>12/13/2011</td>
+    <td>Carpet cleaning</td>
+    <td style="color: green; font-weight: bold;">Open</td>
+  </tr>
+  <tr>
+    <td><p><strong>2</strong></p></td>
+    <td><a href="#">http://buyinpals.com/deals/2</a></td>
+    <td>12/13/2011</td>
+    <td>Carpet cleaning</td>
+    <td style="color: green; font-weight: bold;">Open</td>
+  </tr>
+  <tr>
+    <td><p><strong>3</strong></p></td>
+    <td><a href="#">http://buyinpals.com/deals/3</a></td>
+    <td>12/12/2011</td>
+        <td>Carpet cleaning</td>
+    <td style="color: green; font-weight: bold;">Open</td>
+  </tr>
+  <tr>
+    <td><p><strong>4</strong></p></td>
+    <td><a href="#">http://buyinpals.com/deals/4</a></td>
+    <td>1/10/2012</td>
+        <td>Carpet cleaning</td>
+    <td style="color: green; font-weight: bold;">Open</td>
+  </tr>
+        </table>
+		<form id="form1" name="form1" method="post" action="">
+	
+          <button class="btn" type="submit">New Search</button>
+		  </form>
+		</div>
+	</div>
+</div> <!-- /centering -->
+	  </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span-two-thirds">
+          <h2>What is Buying Pals?</h2>
+          <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+		  <!-- <p><a class="btn" href="#">View details &raquo;</a></p> -->
+        </div>
+</div>
+      <footer>
+ <p>Copyright ©2011 BuyIn Pals Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the BuyIn Pals User Agreement and Privacy Policy. </p>
+      </footer>
+{% endblock %}

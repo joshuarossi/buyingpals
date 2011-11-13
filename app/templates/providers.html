@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	  <div class="hero-unit">
+		  <div style="text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
+		<h2>Providers</h2>
+		
+		<hr />
+		<p>The following providers can perform this work:</p>
+		<hr />
+		<div class="">
+		<div style="text-align: center;">
+        <table width="400" border="1">
+  <tr>
+    <td>Job ID</td>
+    <td>URL</td>
+    <td>Date</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+		<form id="form1" name="form1" method="post" action="">
+		  <input type="submit" name="button" id="button" value="Submit" />
+		  </form>
+		<img src="{{ STATIC_PREFIX }}images/twitter.png" alt="twitter logo" />
+		<img style="margin-left: 15px;" src="{{ STATIC_PREFIX }}images/facebook.png" alt="twitter logo" />
+		</div>
+	</div>
+</div> <!-- /centering -->
+	  </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span-two-thirds">
+          <h2>What is Buying Pals?</h2>
+          <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+		  <!-- <p><a class="btn" href="#">View details &raquo;</a></p> -->
+        </div>
+</div>
+      <footer>
+ <p>Copyright ©2011 BuyIn Pals Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the BuyIn Pals User Agreement and Privacy Policy. </p>
+      </footer>
+{% endblock %}
