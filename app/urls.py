@@ -48,6 +48,12 @@ urlpatterns = patterns('app.views',
             template_name='vendors/index.html')),
 
     # vendor pages
+
+    url(r'^vendors$',
+        ListView.as_view(
+            model=Vendor,
+            template_name='vendors/index.html')),
+
     url(r'^vendors/(?P<pk>\d+)/$',
         DetailView.as_view(
             model=Vendor,
