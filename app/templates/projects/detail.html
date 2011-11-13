@@ -10,7 +10,7 @@
         </div>
     <div class="hero-unit" style="padding: 3px; font-size:10px">
      <!--div style="text-align: left; padding: 5px; border: 1px solid #ddd; border-radius: 20px;" class="centering" -->
-      <div id="vendorsList" style="float:left; width:380px; margin-right: 5px; border-right:1px solid gray;">
+      <div id="vendorsList" style="float:left; width:385px; margin-right: 5px; ">
        <table>
           <th><td>
                Bids by endors
@@ -20,7 +20,7 @@
 				{% autoescape off %}
 				<div style="border-radius: 10px; background-color: #FFF2BF; padding: 10px; margin-bottom: 10px;">
 					<h3>{{ bid.vendor.name }}</h3>
-					<hr />
+					<hr style="margin: 0px;" />
 				 <p>Rating: ★★★½ {{ bid.vendor.rating }}</p>
 
               <p style="font-size: 90%">{{ bid.description }}</p>
@@ -43,7 +43,7 @@
        </table>
       </div>
 
-      <div id="buyInPalsList" style="float:right; width:210px;padding-left: 3px;">
+      <div id="buyInPalsList" style="float:right; width:210px; border-left:1px solid gray; padding-left: 8px;">
       <table>
 		  <th><td><h3>BuyIn Pals</h3></td></th>
           <tr>
