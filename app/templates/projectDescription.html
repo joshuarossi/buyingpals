@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	  <div class="hero-unit">
+		  <div style="text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
+		<h2>It's on, yo!</h2>
+		<hr />
+		<p>Important Dates</p>
+		<h3>All customers must be in by:</h3>
+		<p>12/1/2011</p>
+		<h4>Vendor response by:</h4>
+		<p>12/6/2011</p>
+		<hr />
+		<div class="">
+		<div style="text-align: center;">
+        <form id="form" name="theform" method="post" action="">
+            {% csrf_token %}
+        <table width="300" border="1">
+			 <tr>
+            <td width="81"><label for="url">URL</label></td>
+            <td width="203">
+				<p><a href="#">http://buyinpals.com/projects/1</a></p>
+				<p>Share this URL with your friends!</p>
+            </td>
+          </tr>
+
+			<tr>
+            <td width="81"><label for="zipcode">Zip Code</label></td>
+            <td width="203">
+				<p>08540</p>              
+            </td>
+          </tr>
+          <tr>
+			  <td><label for="categorySelect"><h3>Current Participation</h3></label></td>
+			  <td><ul><li><a href="#">Arthur D</a></li>
+					  <li><a href="#">Han S</a></li>
+					  <li><a href="#">Draco M</a></li>
+
+				  </ul>
+				  </td>
+			  </tr>
+			  <tr>
+				  <td>
+        </table>
+        <p>
+          <button class="btn" type="submit">Buy In</button>
+        </p>
+        </form>
+        <p>&nbsp;</p>
+		</div>
+	</div>
+</div> <!-- /centering -->
+	  </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span-two-thirds">
+          <h2>What is Buying Pals?</h2>
+          <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+		  <!-- <p><a class="btn" href="#">View details &raquo;</a></p> -->
+        </div>
+</div>
+      <footer>
+ <p>Copyright ©2011 BuyIn Pals Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the BuyIn Pals User Agreement and Privacy Policy. </p>
+      </footer>
+{% endblock %}
