@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+	{% block content %}
+	  <div class="hero-unit">
+		<div class="actions">
+			<h2>New Buying Opportunity</h2>
+			<form action="confirm">
+		<table width="400" border="1">
+    <tr>
+      <td><label for="zipCode">Zip Code</label></td>
+      <td><input type="text" name="zipCode" id="zipCode" /></td>
+    </tr>
+    <tr>
+		<td><label for="categorySelect">Category</label></td>
+      <td><select name="categorySelect" id="categorySelect">
+        <option value="carpetCleaning">Carpet cleaning</option>
+        <option value="chimneySweep">Chimney sweeping</option>
+        <option value="leafBlowing">Leaf blowing</option>
+        <option value="snowRemoval">Snow removal</option>
+      </select></td>
+    </tr>
+    <tr>
+		<td><label for="consumerInterestBy">Consumer express interest by</label></td>
+      <td><input type="text" name="consumerInterestBy" id="consumerInterestBy" /></td>
+    </tr>
+    <tr>
+		<td><label for="servicePerformedBy">Service performed by</label></td>
+      <td><input type="text" name="servicePerformedBy" id="servicePerformedBy" /></td>
+    </tr>
+    <tr>
+		<td><label for="vendorResponseBy">Vendor response in</label></td>
+      <td><input class="uneditable-input" type="text" name="vendorResponseBy" id="vendorResponseBy" disabled="disabled" /></td>
+    </tr>
+</table>
+<button class="btn pull-right" type="submit">Confirm</button>
+</form>
+		<hr />
+	
+		</div>
+	  </div>
+      <footer>
+ <p>Copyright ©2011 BuyIn Pals Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the BuyIn Pals User Agreement and Privacy Policy. </p>
+      </footer>
+	  {% endblock %}

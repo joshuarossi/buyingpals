@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	  <div class="hero-unit">
+		<div class="actions">
+			<h2>Buy In Screen Details</h2>
+			<form action="post/1.html">
+		<table width="400" border="1">
+    <tr>
+      <td><label for="zipCode">Zip Code</label></td>
+      <td><input type="text" name="zipCode" id="zipCode" value="08540" /></td>
+    </tr>
+    <tr>
+     <td><label for="jobNotes">Job Notes</label></td>
+      <td><input type="textarea" rows="2" cols="20" name="jobNotes" id="jobNotes" value="I have 5 rooms and 1,000 Sq Ft." /></td>
+	</tr>
+
+    <tr>
+		<td><label for="consumerInterestBy">Consumer express interest by</label></td>
+      <td><input type="text" name="consumerInterestBy" id="consumerInterestBy" value="12/1/2011" /></td>
+    </tr>
+    <tr>
+		<td><label for="servicePerformedBy">Service performed by</label></td>
+      <td><input type="text" name="servicePerformedBy" id="servicePerformedBy" value="1/1/2012" /></td>
+    </tr>
+    <tr>
+		<td><label for="vendorResponseBy">Vendor response in</label></td>
+      <td><input class="uneditable-input" type="text" name="vendorResponseBy" id="vendorResponseBy" value="1/6/2012" disabled="disabled" /></td>
+    </tr>
+</table>
+<button class="btn pull-right" type="submit">Let's Go!</button>
+</form>
+		<hr />
+	
+		</div>
+	  </div>
+      <footer>
+ <p>Copyright ©2011 BuyIn Pals Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the BuyIn Pals User Agreement and Privacy Policy. </p>
+      </footer>
+{% endblock %}

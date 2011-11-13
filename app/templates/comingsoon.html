@@ -1,0 +1,73 @@
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Buying Pals Coming Soon{% endblock %}</title>
+    <meta name="description" content="Really good deals">
+    <meta name="author" content="me@onpaws.com">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    
+    <link href="{{ STATIC_PREFIX }}css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+    </style>
+    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ STATIC_PREFIX }}images/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ STATIC_PREFIX }}images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ STATIC_PREFIX }}images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ STATIC_PREFIX }}images/apple-touch-icon-114x114.png">
+    
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+			<a class="brand" href="/"><!--<img style="padding: 0px" src="/static/images/logo-square-small.png" />-->BuyIn Pals</a>
+          <ul class="nav">
+          <li><a href="vendors">Service Providers</a></li>
+          </ul>
+		  <form action="login.html" class="pull-right">
+			  <!--
+			  <input class="input-small" type="text" placeholder="Username">
+            <input class="input-small" type="password" placeholder="Password">
+			-->
+            <button class="btn" type="submit">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+     {% block content %}
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+		  <img style="padding: 0px;" src="/static/images/BuyinPalsLogo.jpg">
+        <h1 style="text-align: center; padding: 10px 0;">Coming Soon</h1>
+		<p>Our website is in development and this content is coming soon.</p>
+		<div class="clearfix" style="padding-bottom: 10px;">&nbsp;</div>
+      </div>
+
+      <footer>
+	  <p>Copyright ©2011 BuyIn Pals Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the BuyIn Pals <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>. </p>
+      </footer>
+      {% endblock content %}
+    </div> <!-- /container -->
+
+  </body>
+</html>
