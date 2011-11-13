@@ -1,6 +1,52 @@
 {% extends 'base.html' %}
 
 {% block head %}
+    <style type="text/css">
+  #map {
+    height: 250px;
+    width: 450px;
+    border: 1px solid #333;
+    margin-top: 0.6em;
+  }
+</style>
+
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=true&libraries=places"></script>
+<script type="text/javascript" charset="utf-8">
+    var map;
+    var infowindow;
+
+    function initialize() {
+        var pyrmont = new google.maps.LatLng(40.349777, 	-74.659814);
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: pyrmont,
+            zoom: 11
+        });
+
+        infowindow = new google.maps.InfoWindow();
+
+        $.getJSON('/factual', function(data) {
+            $.each(data.response.data, function (i, place) {
+                var myLatlng = new google.maps.LatLng(place.latitude,place.longitude);
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: myLatlng
+                });
+                console.log(place);
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent(place.name + "\n" + "<br />Powered by Factual");
+                    infowindow.open(map, this);
+                });
+            })
+        });
+
+    }
+
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 {% endblock head %}
 
 {% block content %}
@@ -8,12 +54,17 @@
     <div class="page-header">
 			<h1>{{ project.title }}<small></small></h1>
         </div>
+    <div class="hero-unit">
+		  <div style="text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 20px;" class="centering">
+		      <div id="map"></div>
+	  </div>
+
     <div class="hero-unit" style="padding: 3px; font-size:10px">
      <!--div style="text-align: left; padding: 5px; border: 1px solid #ddd; border-radius: 20px;" class="centering" -->
-      <div id="vendorsList" style="float:left; width:380px; margin-right: 5px; border-right:1px solid gray;">
+      <div id="vendorsList" style="float:left; width:380px; margin-right: 5px;">
        <table>
           <th><td>
-               Bids by endors
+               Bids by vendors
           </td></th>
            {% for bid in project.bid_set.all %}
           <tr>
@@ -21,7 +72,7 @@
 				<div style="border-radius: 10px; background-color: #FFF2BF; padding: 10px; margin-bottom: 10px;">
 					<h3>{{ bid.vendor.name }}</h3>
 					<hr />
-				 <p>Rating: ★★★½ {{ bid.vendor.rating }}</p>
+				 <p>Rating: ★★★½ </p>
 
               <p style="font-size: 90%">{{ bid.description }}</p>
 			 			  <style>
@@ -43,52 +94,19 @@
        </table>
       </div>
 
-      <div id="buyInPalsList" style="float:right; width:210px;padding-left: 3px;">
+      <div id="buyInPalsList" style="float:right; width:110px;padding-left: 3px;">
       <table>
-		  <th><td><h3>BuyIn Pals</h3></td></th>
+		  <th><td><h3> Pals</h3></td></th>
+          {% for member in project.members.all %}
           <tr>
-           <table style="border:1px solid grey">
-              <tr><td>User </td><td>caren</td></tr>
-              <tr><td>Street Name</td><td>main st.</td></tr>
-              <tr><td>ZipCode</td><td>08536</td></tr>
+           <table style="">
+              <tr><td>User </td><td>{{ member.username }}</td></tr>
+              <tr>
+                  
+              </tr>
            </table>
           </tr>
-          <tr>
-           <table style="border:1px solid grey">
-              <tr><td>User </td><td>ajain</td></tr>
-              <tr><td>Street Name</td><td>main st.</td></tr>
-              <tr><td>ZipCode</td><td>08536</td></tr>
-           </table>
-          </tr>
-          <tr>
-           <table style="border:1px solid grey">
-              <tr><td>User </td><td>knownpal</td></tr>
-              <tr><td>Street Name</td><td>nassau blvd.</td></tr>
-              <tr><td>ZipCode</td><td>08536</td></tr>
-           </table>
-          </tr>
-          <tr>
-           <table style="border:1px solid grey">
-              <tr><td>User </td><td>goodfriend</td></tr>
-              <tr><td>Street Name</td><td>prospect ave</td></tr>
-              <tr><td>ZipCode</td><td>08536</td></tr>
-           </table>
-          </tr>
-          <tr>
-           <table style="border:1px solid grey">
-              <tr><td>User </td><td>NextDoorNeigbhor</td></tr>
-              <tr><td>Street Name</td><td>main st.</td></tr>
-              <tr><td>ZipCode</td><td>08536</td></tr>
-           </table>
-          </tr>
-          <tr>
-           <table style="border:1px solid grey">
-              <tr><td>User </td><td>Neigbhor2</td></tr>
-              <tr><td>Street Name</td><td>main st.</td></tr>
-              <tr><td>ZipCode</td><td>08536</td></tr>
-           </table>
-          </tr>
-
+          {% endfor %}
       </table>
 
       </div>

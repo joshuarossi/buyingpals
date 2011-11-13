@@ -45,8 +45,8 @@
   <tr>
     <td><p><strong>{{ project.pk }}</strong></p></td>
     <td><a href="/projects/{{ project.pk }}">http://buyinpals.com/projects/{{ project.pk }}</a></td>
-    <td>12/13/2011</td>
-    <td>{{ project.tags.all }}</td>
+    <td>{{ project.pk }}/1{{ project.pk }}/2011</td>
+    <td>{{ project.tags.all.0 }}</td>
     <td style="color: green; font-weight: bold;">Open</td>
   </tr>
     {% endfor %}
