@@ -18,7 +18,7 @@
            {% for bid in project.bid_set.all %}
           <tr>
 				{% autoescape off %}
-				<div style="border-radius: 10px; background-color: #FFEA99; padding: 10px; margin-bottom: 10px;">
+				<div style="border-radius: 10px; background-color: #FFF2BF; padding: 10px; margin-bottom: 10px;">
 					<h3>{{ bid.vendor.name }}</h3>
 					<hr />
 				 <p>Rating: ★★★½ {{ bid.vendor.rating }}</p>
@@ -28,6 +28,7 @@
 				  p {  line-height: auto; }
 			  </style>
 			  <div style="font-size: 12px; border: 0px solid gray; line-height: auto;">
+				<h4>Address</h4>
 			  <p style="font-size: 12px; line-height: 12px;">{{ bid.vendor.address.street }}</p>
               <p style="font-size: 12px; line-height: 12px; ">{{ bid.vendor.address.city}}</p>
               <p style="font-size: 12px; line-height: 12px; ">{{ bid.vendor.address.state }}</p>
