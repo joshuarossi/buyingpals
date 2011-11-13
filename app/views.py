@@ -48,4 +48,9 @@ def searchresults(request):
 def projectDescription(request):
 	return render_to_response('projectDescription.html',  context_instance=RequestContext(request))
 
+def projectDescription(request):
+	return render_to_response('buyInScreen.html',  context_instance=RequestContext(request))
+
+
+
 

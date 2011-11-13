@@ -27,8 +27,9 @@ urlpatterns = patterns('app.views',
 	url(r'^providers$', 'providers'),
 	url(r'^search$', 'search'),
 	url(r'^searchresults$', 'searchresults'),
+	url(r'^buyinscreen$', 'buyinscreen'),
 
-	    # project pages
+	# project pages
     url(r'^projects$',
         ListView.as_view(
             model=Project,
